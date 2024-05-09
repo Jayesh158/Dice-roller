@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roller</title>
-</head>
-<body>
+    <style>
+        body{
+            background-color: #FF3CAC;
+            background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+            min-height: 100vh;
+        }
+        .title{
+            text-align: center;
+            padding-top: 40px;
+        }
+        .rolldice{
+            width: 200px;
+            height: 200px;
+            display: block;
+            margin: 30px auto;
+        }
+        .random-btn{
+            width: 200px;
+            display: block;
+            margin: 20px auto;
+            font-size: 25px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: #74EBD5;
+            background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+            color: white;
+            cursor: pointer;
+        }
     
-</body>
+    </style>
+    </head>
+    <body> 
+        <div>
+            <h1 class="title"> Dice roller </h1>
+            <img src="./img/dice.png" alt="Dice" class="rolldice" id="img"/>
+            <button class="random-btn" onclick="diceROLL()">Roll Dice</button>
+        </div>
+    </body>
 </html>
