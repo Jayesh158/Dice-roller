@@ -6,13 +6,14 @@
     <title>Roller</title>
     <style>
         body{
-            background-color: #FF3CAC;
-            background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #6ac850 46%, #FFCC70 100%);
             min-height: 100vh;
         }
         .title{
             text-align: center;
             padding-top: 40px;
+            color: rgb(49, 9, 117);
         }
         .rolldice{
             width: 200px;
@@ -28,10 +29,10 @@
             padding: 5px 10px;
             border: none;
             border-radius: 10px;
-            background-color: #74EBD5;
-            background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
             color: white;
             cursor: pointer;
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #439eba 46%, #b15297 100%);
         }
     
     </style>
@@ -42,5 +43,33 @@
             <img src="./img/dice.png" alt="Dice" class="rolldice" id="img"/>
             <button class="random-btn" onclick="diceROLL()">Roll Dice</button>
         </div>
-    </body>
+    <script>
+        function diceROLL(){
+            const min = 1;
+            const max = 6;
+            const Number = Math.round(Math.random() * (max - min)) + min;
+            const Element = document.getElementById('img');
+            switch(Number){
+                case 1:
+                    Element.src = './img/dice1.png';
+                    break;
+                case 2:
+                    Element.src = './img/dice2.png';
+                    break;
+                case 3:
+                    Element.src = './img/dice3.png';
+                    break;
+                case 4:
+                    Element.src = './img/dice4.png';
+                    break;
+                case 5:
+                    Element.src = './img/dice5.png';
+                    break;
+                case 6:
+                    Element.src = './img/dice6.png';
+                    break;
+            }
+        }
+    </script>
+</body>
 </html>
